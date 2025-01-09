@@ -14,3 +14,41 @@ Expected Outcomes:
 */
 
 // Place your plan and solution below!
+
+
+/*
+plan
+grab the onbutton
+tell the button to change the picture
+picture changes when button clicked
+function will change the img src
+when button is clicked run function
+*/
+
+const onButton = document.getElementById("turnBulbOn");
+
+const img = document.getElementById("lightbulb");
+
+function bulbOn() {
+  img.src = "light-bulb-on.png"
+};
+
+onButton.addEventListener("click", bulbOn);
+
+const offButton = document.getElementById("turnBulbOff");
+
+
+function bulbOff() {
+  img.src = "light-bulb-off.png"
+};
+
+offButton.addEventListener("click", bulbOff);
+
+
+
+
+
+
+
+
+

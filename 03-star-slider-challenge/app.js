@@ -13,3 +13,35 @@ Expected Outcomes:
 */
 
 // Place your plan and solution below!
+
+
+/*
+plan
+
+target slider range
+for each increment of range 
+create a new span star icon 
+for each decrese in range
+remove created span
+
+*/
+
+const slider = document.getElementById("starSlider");
+
+const stars = document.getElementById("stars");
+
+function starControl() {
+
+  const starCount = slider.value;
+
+    for (let i = 1; i < starCount; i++) {
+        const star = document.createElement("span"); 
+        star.classList.add("star-icon");
+        star.textContent ="★";
+        stars.appendChild(star);
+    }
+
+
+};
+
+slider.addEventListener("input", starControl)
