@@ -31,10 +31,15 @@ const slider = document.getElementById("starSlider");
 const stars = document.getElementById("stars");
 
 function starControl() {
-
+// removes stars
+  let child = stars.lastElementChild;
+  while (child) {
+        stars.removeChild(child);
+        child = stars.lastElementChild;
+  }
   const starCount = slider.value;
-
-    for (let i = 1; i < starCount; i++) {
+  console.log(starCount)
+    for (let i = 0; i < starCount; i++) {
         const star = document.createElement("span"); 
         star.classList.add("star-icon");
         star.textContent ="★";
